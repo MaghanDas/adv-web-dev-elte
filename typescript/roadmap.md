@@ -33,3 +33,14 @@ TypeScript with frontend (React)
 Clean architecture
 Scaling codebases
 Debugging & refactoring large TS systems
+
+# import commands
+3. Setup
+
+Install:
+npm init -y
+npm install typescript --save-dev
+npx tsc --init
+
+Run compiler:
+npx tsc
