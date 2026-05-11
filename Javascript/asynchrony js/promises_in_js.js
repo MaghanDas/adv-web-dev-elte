@@ -178,7 +178,7 @@ function step3(cb) {
   
   // *******************************
 
-// 🧠 2. Event Loop (HOW JS THINKS)
+//  2. Event Loop (HOW JS THINKS)
 // Components:
 // Call Stack → runs code
 // Web APIs → handles async work
@@ -187,7 +187,7 @@ function step3(cb) {
 
 
 
-// 🔥 Mental model:
+//  Mental model:
 // Sync code → Call Stack
 // Async task → Web API
 // Finished → Queue
@@ -259,8 +259,7 @@ function step3(cb) {
 //   console.log("Done")
 // });
 
-// 🧠 WHAT IS HAPPENING?
-
+// WHAT IS HAPPENING?
 // Step-by-step:
 
 // 1. delay(1000)
@@ -429,7 +428,7 @@ function step3(cb) {
   
 // 1. All promises STILL run
 // Even though Y wins, others don’t stop.
-// 👉 They are NOT cancelled
+// They are NOT cancelled
 // ⚠️ 5. Key rule
 // Promise.race does NOT cancel other promises — it only picks the first result
 
@@ -442,7 +441,7 @@ function step3(cb) {
 //   fetchData(),
 //   delay(3000, "timeout")
 // ])
-// // 👉 If API is slow → timeout wins
+// //  If API is slow → timeout wins
 
 // // 🌐 2. Fastest server response
 // Promise.race([
@@ -450,7 +449,7 @@ function step3(cb) {
 //   fetch(server2),
 //   fetch(server3)
 // ])
-// // 👉 fastest server response is used
+// //  fastest server response is used
 
 
 // // 📱 3. UI loading fallback

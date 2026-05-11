@@ -2,20 +2,20 @@
 
 // why async/await exists 
 
-// delay(1000)
-//   .then(() => delay(500))
-//   .then(() => delay(200))
+delay(1000)
+  .then(() => delay(500))
+  .then(() => delay(200))
 
-// 👉 Problem:
+//  Problem:
 // still chaining
 // harder to read in complex flows
 
-// ✨ With async/await:
-// await delay(1000);
-// await delay(500);
-// await delay(200);
+//  With async/await:
+await delay(1000);
+await delay(500);
+await delay(200);
 
-// 👉 Looks synchronous, but is still async
+//  Looks synchronous, but is still async
 
 
 // ----------------------------
@@ -50,7 +50,7 @@ async function run() {
 run();
 
 
-// 🧠 4. What actually happens
+// 4. What actually happens
 // Even though it looks synchronous:
 // await = "pause here until Promise finishes"
 
@@ -60,7 +60,7 @@ run();
 // it only pauses inside the function
 
 
-// 🔥 5. async functions ALWAYS return a Promise
+// 5. async functions ALWAYS return a Promise
 // async function test() {
 //   return 10;
 // }

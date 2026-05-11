@@ -1,12 +1,12 @@
 // API CALL: 
 
-// fetch("https://jsonplaceholder.typicode.com/users")
-// .then((response)=>{
-//     return response.json();
-// })
-// .then((data) => {
-//     console.log(data)
-// })
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((response)=>{
+    return response.json();
+})
+.then((data) => {
+    console.log(data)
+})
 // 🧠 What happens step-by-step
 // fetch() → sends request
 // returns Promise
