@@ -114,4 +114,65 @@ stringStore.add("hello");
 stringStore.add("world");
 const data = stringStore.getAll();
 console.log(data);
+// any vs unknown in typescript 
+// Turns TypeScript OFF.
+// let value: any = "hello";
+// value.toFixed(); // no error
+// Dangerous.
+// unknown
+// Safer alternative.
+// let value: unknown = "hello";
+// You MUST narrow first.
+// never means:
+// “This can NEVER happen”
+// Example 1 — Throwing Errors
+// function throwError(message: string): never {
+//   throw new Error(message);
+// }
+// Function never returns.
+// Execution stops forever.
+// 🚨 Senior Engineering Rules
+// Avoid:
+// any
+// Prefer:
+// unknown
+// Use:
+// never
+// for exhaustive checking.
+// Use:
+// void
+// for non-returning functions.
+// Safe API Parser
+// type ApiResponse =
+//   | {
+//       status: "success";
+//       data: unknown;
+//     }
+//   | {
+//       status: "error";
+//       message: string;
+//     };
+// function handleResponse(response: ApiResponse): void {
+//   switch (response.status) {
+//     case "success":
+//       // Narrow unknown safely
+//       if (Array.isArray(response.data)) {
+//         console.log("Array data:", response.data);
+//       }
+//       else if (typeof response.data === "string") {
+//         console.log("String data:", response.data.toUpperCase());
+//       }
+//       else {
+//         console.log("Unknown success data");
+//       }
+//       break;
+//     case "error":
+//       console.log("Error:", response.message);
+//       break;
+//     default:
+//       // Exhaustive checking
+//       const exhaustiveCheck: never = response;
+//       return exhaustiveCheck;
+//   }
+// }
 //# sourceMappingURL=main.js.map
